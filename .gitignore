@@ -1,0 +1,17 @@
+# Unity generated folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+
+# Auto-generated packages
+Packages/com.unity.package-manager*
+
+# OS-specific
+.DS_Store
+Thumbs.db
