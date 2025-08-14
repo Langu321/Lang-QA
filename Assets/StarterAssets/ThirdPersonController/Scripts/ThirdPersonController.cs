@@ -1,6 +1,7 @@
 ﻿ using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -87,6 +88,11 @@ namespace StarterAssets
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
 
+        private float crouchHeight = 1f;
+        private float standingHeight = 2f;
+        private Vector3 crouchingCenter = new Vector3(0, 0.5f, 0);
+        private Vector3 standingCenter = new Vector3(0, 1f, 0);
+
         // timeout deltatime
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
@@ -105,6 +111,8 @@ namespace StarterAssets
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
+
+        private bool isCrouching = false;
 
         private const float _threshold = 0.01f;
 
@@ -159,6 +167,8 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            HandleCrouch();
+
         }
 
         private void LateUpdate()
@@ -347,6 +357,38 @@ namespace StarterAssets
                 _verticalVelocity += Gravity * Time.deltaTime;
             }
         }
+
+    // ----LINHANH---- add crouch lgoic
+        private void HandleCrouch()
+        {
+            if (_input.crouch)
+            {
+                isCrouching = !isCrouching;
+                if (isCrouching)
+                {
+                    Crouch();
+                }
+                else
+                {
+                    StopCrouch();
+                }
+
+                // Reset input để tránh spam toggle mỗi frame khi giữ nút
+                _input.crouch = false;
+            }
+        }
+        private void Crouch()
+        {
+            _controller.height = crouchHeight;
+            _controller.center = crouchingCenter;
+        }
+
+        private void StopCrouch()
+        {
+            _controller.height = standingHeight;
+            _controller.center = standingCenter;
+    
+    }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
         {
