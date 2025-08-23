@@ -37,3 +37,5 @@ Packages/com.unity.package-manager*
 # OS-specific
 .DS_Store
 Thumbs.db
+.vs/Lang-QA/xs
+.vs
