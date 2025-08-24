@@ -61,31 +61,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/ThamKhao/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualTouchZone.cs" />
-    <Compile Include="Assets/_Scripts/Units/QuangAnh/BasicRigidBodyPush.cs" />
+    <Compile Include="Assets/_Scripts/QuangAnh/Climb Script/PlayerClimb.cs" />
     <Compile Include="Assets/ThamKhao/Script Tham Khao/Managers/ExampleUnitManager.cs" />
     <Compile Include="Assets/ThamKhao/Script Tham Khao/Scriptables/ScriptableExampleUnitBase.cs" />
-    <Compile Include="Assets/_Scripts/CameraSetting/CameraDirector.cs" />
     <Compile Include="Assets/_InputSystem/StarterAssetsInputs.cs" />
     <Compile Include="Assets/ThamKhao/Script Tham Khao/Utilities/Helpers.cs" />
     <Compile Include="Assets/ThamKhao/Script Tham Khao/Systems/Systems.cs" />
     <Compile Include="Assets/ThamKhao/Script Tham Khao/Systems/ResourceSystem.cs" />
-    <Compile Include="Assets/_Scripts/CameraSetting/TemporaryRotateVCamOverride.cs" />
+    <Compile Include="Assets/_Scripts/QuangAnh/IInteractable.cs" />
+    <Compile Include="Assets/_Scripts/Camera Script/CameraDirector.cs" />
+    <Compile Include="Assets/_Scripts/QuangAnh/PlayerController.cs" />
     <Compile Include="Assets/ThamKhao/StarterAssets/Mobile/Scripts/CanvasInputs/UICanvasControllerInput.cs" />
     <Compile Include="Assets/ThamKhao/StarterAssets/Mobile/Scripts/Utilities/MobileDisableAutoSwitchControls.cs" />
-    <Compile Include="Assets/_Scripts/Units/Enemies/EnemyController.cs" />
+    <Compile Include="Assets/_Scripts/Manager Script/LevelManager.cs" />
+    <Compile Include="Assets/ThamKhao/Units/Enemies/EnemyController.cs" />
+    <Compile Include="Assets/_Scripts/QuangAnh/Movement Script/ThirdPersonController.cs" />
     <Compile Include="Assets/ThamKhao/StarterAssets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/_Scripts/OnTriggerZone.cs" />
-    <Compile Include="Assets/_Scripts/Units/QuangAnh/ThirdPersonController.cs" />
+    <Compile Include="Assets/_Scripts/QuangAnh/Climb Script/RoofLedgeDetection.cs" />
     <Compile Include="Assets/ThamKhao/Script Tham Khao/Utilities/StaticInstance.cs" />
-    <Compile Include="Assets/_Scripts/Managers/GameManager.cs" />
+    <Compile Include="Assets/_Scripts/Manager Script/GameManager.cs" />
+    <Compile Include="Assets/_Scripts/QuangAnh/Movement Script/BasicRigidBodyPush.cs" />
     <Compile Include="Assets/ThamKhao/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualJoystick.cs" />
     <Compile Include="Assets/ThamKhao/Script Tham Khao/Scriptables/ScriptableExampleHero.cs" />
-    <Compile Include="Assets/_Scripts/Units/QuangAnh/IInteractable.cs" />
-    <Compile Include="Assets/_Scripts/Units/QuangAnh/PlayerController.cs" />
-    <Compile Include="Assets/_Scripts/Managers/LevelManager.cs" />
     <Compile Include="Assets/ThamKhao/Script Tham Khao/Systems/AudioSystem.cs" />
     <Compile Include="Assets/ThamKhao/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualButton.cs" />
-    <Compile Include="Assets/_Scripts/Units/QuangAnh/PlayerClimb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/ThamKhao/StarterAssets/license.txt" />

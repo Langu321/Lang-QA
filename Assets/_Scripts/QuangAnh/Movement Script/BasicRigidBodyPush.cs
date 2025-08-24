@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// This script push all rigidbodies that character touches
+/// </summary>
 public class BasicRigidBodyPush : MonoBehaviour
 {
 	public LayerMask pushLayers;
